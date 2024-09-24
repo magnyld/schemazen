@@ -1376,7 +1376,7 @@ where name = @dbname
 	public void ImportData(Action<TraceLevel, string> log = null) {
 		if (log == null) log = (tl, s) => { };
 
-		var dataDir = Dir + "\\data";
+		var dataDir = Dir + "/data";
 		if (!Directory.Exists(dataDir)) {
 			log(TraceLevel.Verbose, "No data to import.");
 			return;
